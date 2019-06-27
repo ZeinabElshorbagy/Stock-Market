@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_27_205159) do
+ActiveRecord::Schema.define(version: 2019_06_27_223516) do
 
   create_table "assets", force: :cascade do |t|
     t.string "name", null: false
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 2019_06_27_205159) do
   create_table "jwt_blacklist", force: :cascade do |t|
     t.string "jti", null: false
     t.index ["jti"], name: "index_jwt_blacklist_on_jti"
+  end
+
+  create_table "portfolios", force: :cascade do |t|
+    t.float "invest_amount", null: false
+    t.integer "users_id"
+    t.integer "assets_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["assets_id"], name: "index_portfolios_on_assets_id"
+    t.index ["users_id"], name: "index_portfolios_on_users_id"
   end
 
   create_table "users", force: :cascade do |t|

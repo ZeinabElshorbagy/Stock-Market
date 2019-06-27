@@ -5,7 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :jwt_authenticatable, jwt_revocation_strategy: JwtBlacklist
 
-  
+
+  has_many :portfolios
+  has_many :assets, through: :portfolios
+
   def is_admin?
     user_type == 'admin'
   end

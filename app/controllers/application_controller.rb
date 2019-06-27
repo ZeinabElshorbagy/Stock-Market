@@ -4,7 +4,8 @@ class ApplicationController < ActionController::API
   respond_to :json
 
   def authenticate_admin?
-    current_user.is_admin?
+    render json: {error: 'you are not an admin'} and return unless current_user.is_admin?
+
   end
   def configure_permitted_parameters
   devise_parameter_sanitizer.permit(:sign_up, keys: [:user_name])
