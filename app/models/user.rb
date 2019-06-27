@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :jwt_authenticatable, jwt_revocation_strategy: JwtBlacklist
 
-
+  
   def is_admin?
     user_type == 'admin'
   end
@@ -13,5 +13,5 @@ class User < ApplicationRecord
   def is_user?
     user_type == 'user'
   end
-  
+
 end
