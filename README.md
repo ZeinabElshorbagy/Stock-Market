@@ -1,24 +1,20 @@
-# README
+# STOCK MARKET
+## Getting Started
+clone the project into your local machine 
+or use the deployed version on heroku 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Installing
 
-Things you may want to cover:
+A step by step series of examples that tell you how to get a development env running
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Say what the step will be
+```
+bundle install
+rake db:setup
+rake db:migrate 
+rake db:seed
+```
+to run the server 
+```
+rails s
+```
