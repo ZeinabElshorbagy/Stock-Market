@@ -1,4 +1,4 @@
 class Portfolio < ApplicationRecord
+  has_many :invests
   belongs_to :user
-  belongs_to :asset
 end

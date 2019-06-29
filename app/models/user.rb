@@ -7,7 +7,8 @@ class User < ApplicationRecord
 
 
   has_many :portfolios
-  has_many :assets, through: :portfolios
+  has_many :invests
+  has_many :assets, through: :invests
 
   def is_admin?
     user_type == 'admin'

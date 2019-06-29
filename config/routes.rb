@@ -10,4 +10,8 @@ Rails.application.routes.draw do
              },defaults: {format: :json}
 
   resources :assets
+  resources :users do
+   resources :portfolios
+ end
+
 end
