@@ -1,7 +1,7 @@
 # STOCK MARKET
 ## Getting Started
 clone the project into your local machine 
-or use the deployed version on heroku 
+or use the deployed version on heroku https://stockmarketz.herokuapp.com/
 
 ### Installing
 
